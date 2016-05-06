@@ -41,6 +41,7 @@ packages
 
 The ``packages`` subdirectory contains tool dependency packages:
 
+ * package_bioawk_1_0
  * package_numpy_1_8
  * package_pandaseq_2_8_1
  * package_python2_7

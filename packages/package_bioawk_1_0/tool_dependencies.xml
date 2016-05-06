@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<tool_dependency>
+  <package name="bioawk" version="1.0">
+    <install version="1.0">
+      <actions>
+	<action type="download_by_url">https://github.com/lh3/bioawk/archive/v1.0.tar.gz</action>
+	<action type="shell_command">make</action>
+	<action type="move_file">
+	  <source>bioawk</source>
+	  <destination>$INSTALL_DIR/</destination>
+	</action>
+	<action type="move_file">
+	  <source>maketab</source>
+	  <destination>$INSTALL_DIR/</destination>
+	</action>
+	<action type="set_environment">
+	  <environment_variable name="PATH" action="prepend_to">$INSTALL_DIR/bin</environment_variable>
+	</action>
+      </actions>
+    </install>
+    <readme>bioawk 1.0
+
+    Bioawk is an extension to Brian Kernighan's awk, adding the support of
+    several common biological data formats, including optionally gzip'ed BED,
+    GFF, SAM, VCF, FASTA/Q and TAB-delimited formats with column names. It
+    also adds a few built-in functions and an command line option to use TAB
+    as the input/output delimiter. When the new functionality is not used,
+    bioawk is intended to behave exactly the same as the original BWK
+    awk.
+
+    https://github.com/lh3/bioawk
+    </readme>
+  </package>
+</tool_dependency>
